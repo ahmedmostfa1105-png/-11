@@ -18,18 +18,19 @@
     font-family:'Cairo',sans-serif;
 }
 
-body{
-    min-height:100vh;
-    overflow:hidden;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(-45deg,#ff4e8a,#6a5cff,#00c9ff,#ff4e8a);
-    background-size:400% 400%;
-    animation:bg 10s ease infinite;
-    position:relative;
+.photo{
+    width:240px;
+    height:240px;
+    min-width: 90px;
+    object-fit:cover;
+    border-radius:50%;
+    border:5px solid white;
+    box-shadow:
+    0 0 20px #fff,
+    0 0 40px #ff4e8a,
+    0 0 70px #6a5cff;
+    animation:float 3s ease-in-out infinite;
 }
-
 @keyframes bg{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
@@ -134,11 +135,11 @@ canvas{
 
     <h1 id="name">Happy Birthday 🎉</h1>
 
-    <p id="text">كل سنة وانتي طيبة ❤️</p>
+    <p id="text">كل سنة وانتي طيبة ي ايوياا❤️</p>
 
     <h2 id="giftMessage"></h2>
 
-    <button class="btn" onclick="party()">افتح الهدية 🎁</button>
+    <button class="btn" onclick="party()">افتحي الهدية 🎁</button>
 
 </div>
 
@@ -171,7 +172,7 @@ function party(){
     document.getElementById("music").play();
 
     document.getElementById("text").innerText =
-    "أنا مش بعرف أعبّر قوي... بس كل سنة وانتي أجمل حاجة حصلت ❤️";
+    "بصي بقا انا قولتلك كذا مرة قبل كدا اني مش بعرف ابين حبي او اعبر عنه, النهاردة انتي تميتي 19 سنة وحبك ف قلبي بيكبر كل يوم حبيت بس اعملك حاجة مختلفة عشان اقولك بيها كل سنة وانتي طيبة ي اجمل واطيب واحن واحدة ف الدنيا❤❤️";
 
     let gift=document.getElementById("giftMessage");
     gift.innerText="بحبك ❤️";
